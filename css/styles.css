@@ -63,6 +63,10 @@ body {
     padding: 120px 0;
 }
 
+.social-icon {
+    fill: #4d5ae5;
+}
+
 /* ============ /common styles ============ */
 
 /* ============ header ============ */
@@ -243,10 +247,13 @@ body {
     width: calc((100% - 3 * 24px) / 4);
     background-color: #FFFFFF;
     border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 
+                0 1px 1px 0 rgba(46, 47, 66, 0.16), 
+                0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .team-list-item-text {
-    padding: 32px 16px;
+    padding: 32px 0;
 }
 
 .team-list-item-title {
@@ -268,7 +275,7 @@ body {
 
 .team-list-item-icons {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 24px;
 }
 
@@ -332,6 +339,10 @@ body {
     padding: 100px 0;
 }
 
+.footer-content {
+    display: flex;
+}
+
 .footer .logo-web {
     display: inline-block;
     padding: 0;
@@ -355,5 +366,27 @@ body {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #F4F4FD;
+}
+
+.footer-social-media {
+    margin-left: 120px;
+}
+
+.social-media-title {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.footer-list {
+    display: flex;
+    gap: 16px;
+}    
+    
+.footer-icon:hover .social-icon,
+.footer-icon:focus .social-icon{
+    fill: #31D0AA;
+
 }
 /* ============ /footer ============ */
