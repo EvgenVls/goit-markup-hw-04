@@ -63,16 +63,14 @@ body {
     padding: 120px 0;
 }
 
-.social-icon {
-    fill: #4d5ae5;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 /* ============ /common styles ============ */
 
 /* ============ header ============ */
 .page-header {
     border-bottom: 1px solid  #E7E9FC;
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+        0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+        0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .page-header .container {
@@ -146,6 +144,10 @@ body {
     color: #404BBF;
 }
 
+.nav-list-link.active {
+    color: #404BBF;
+}
+
 .nav-list-link.active::after {
     position: absolute;
     bottom: -1px;
@@ -161,6 +163,7 @@ body {
 
 /* ============ hero ============ */
 .hero {
+    max-width: 1440px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.70),
         rgba(46, 47, 66, 0.70)
@@ -171,6 +174,7 @@ body {
     background-size: cover;
     background-color: #2E2F42;
     padding: 188px 0;
+    margin: 0 auto;
 }
 
 .hero-content {
@@ -202,7 +206,7 @@ body {
     padding: 16px 32px;
     border-radius: 4px;
     margin: 0 auto;
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -221,15 +225,15 @@ body {
     width: calc((100% - 3 * 24px) / 4);
 }
 
-.feauteres-list-item-icon {
-    display: block;
-    width: 100%;
-    min-height: 112px;
+.feauteres-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
     background: #F4F4FD;
     border: 1px solid #8E8F99;
     border-radius: 4px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    margin-bottom: 8px;
 }
 
 .features-list-item-title {
@@ -297,15 +301,35 @@ body {
     margin-bottom: 8px;
 }
 
-.team-list-item-icons {
+.team-list-icons {
     display: flex;
     justify-content: center;
     gap: 24px;
 }
 
-.social-icon {
-    display: block;
+.team-list-icons-item {
+    width: 40px;
+    height: 40px;
+}
+
+.social-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
     border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon {
+    fill: #F4F4FD;
+}
+
+.social-icon-link:hover,
+.social-icon-link:focus {
+    background-color: #404BBF;
 }
 /* ============ /team ============ */
 
@@ -361,11 +385,17 @@ body {
     border-left: 1px solid #E7E9FC;
 }
 
-.overlay {
+.overlay-text {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
+    padding: 40px 32px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
     background-color: #4D5AE5;
     overflow: auto;
     transform: translateY(100%);
@@ -378,7 +408,7 @@ body {
                 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
-.portfolio-list-item:hover .overlay {
+.portfolio-list-item:hover .overlay-text {
     transform: translateY(0%);
 }
 /* ============ /portfolio ============ */
@@ -391,6 +421,11 @@ body {
 
 .footer-content {
     display: flex;
+    align-items: baseline;
+}
+
+.footer-slogan {
+    margin-right: 120px;
 }
 
 .footer .logo-web {
@@ -418,11 +453,9 @@ body {
     color: #F4F4FD;
 }
 
-.footer-social-media {
-    margin-left: 120px;
-}
-
 .social-media-title {
+    font-size: 16px;
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #FFFFFF;
@@ -432,11 +465,31 @@ body {
 .footer-list {
     display: flex;
     gap: 16px;
-}    
+}
+
+.footer-list-item {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon {
+    fill:#F4F4FD;
+}
     
-.footer-icon:hover .social-icon,
-.footer-icon:focus .social-icon{
-    fill: #31D0AA;
+.footer-icon:hover,
+.footer-icon:focus{
+    background-color: #31D0AA;
 
 }
 /* ============ /footer ============ */
